@@ -10,7 +10,7 @@ int main()
 
 
     setlocale(LC_ALL,"Portuguese");
-    printf("C�lculo de m�dia ponderada com 3 notas\n");
+    printf("Cálculo de média ponderada com 3 notas\n");
     printf("Nota 1: ");
     scanf("%f", &n1);
     printf("Peso 1: ");
@@ -30,7 +30,7 @@ int main()
     media = (n1*p1) + (n2*p2) + (n3*p3);
     media = media/somaPeso;
 
-    printf("\nM�dia: %.2f", media);
+    printf("\nMédia: %.2f", media);
     printf("\n\n");
 
 
