@@ -1,0 +1,30 @@
+a = 3
+b = 6
+c = 10
+x = 6.8
+y = 5.3
+media = 
+
+
+
+
+LOG
+0
+1
+0
+1
+0
+0
+0
+1
+1
+1
+1
+0
+Media: 6.05
+Resultado: 1
+Resultado: 1
+Resultado: 0
+Media: 10.00
+a: 6
+b: 6
