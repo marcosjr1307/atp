@@ -1,23 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 #include <math.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    float altura_degrau, altura_final, qtd_degrau;
+    float step_height, final_height, qty_step;
     
-    printf("Insira a altura do degrau em metros: ");
-    scanf("%f", &altura_degrau);
+    printf("Enter the steps height in meters: ");
+    scanf("%f", &step_height);
 
-    printf("Insira a altura a ser alcançada em metros: ");
-    scanf("%f", &altura_final);
+    printf("Enter the  height to be reached in meters: ");
+    scanf("%f", &final_height);
 
-    qtd_degrau = altura_final/altura_degrau;
-    qtd_degrau = ceil(qtd_degrau);
+    qty_step = final_height/step_height;
+    qty_step = ceil(qty_step);
 
-    printf("A quantidade necessária de degrau(s) é(são): %.0f degrau(s)", qtd_degrau);
-
+    printf("The necessary quantity of step(s) is(are): %.0f step(s)", qty_step);
+    printf("\n\n");
 
     return 0;
 }

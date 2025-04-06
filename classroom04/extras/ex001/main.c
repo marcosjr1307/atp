@@ -1,93 +1,96 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    int opcao;
-    printf("\n\nJogo de adivinhação de animal");
-    printf("Em qual espécie de animal você está pensando?\n(1) Mamífero\n(2) Ave\n(3) Réptil\n");
-    printf("Insira a opção: ");
-    scanf("%d", &opcao);
+    int option;
+    printf("\n\nAnimal guessing game");
+    printf("Which specie of animal are you thinking?\n(1) Mammal\n(2) Bird\n(3) Reptiles\n");
+    printf("Enter the option: ");
+    scanf("%d", &option);
 
-    switch (opcao)
+    switch (option)
     {
-    case 1:
-        int opcaoMamifero;
-        printf("Certo, você está pensando em um mamífero, agora me diga como ele desloca-se: \n(1) Quadrúpede\n(2) Bípede\n(3) Voador\n(4) Aquático\n");
-        printf("Insira a opção: ");
-        scanf("%d", &opcaoMamifero);
-        switch (opcaoMamifero)
+    case 1: {
+        int mammal_option;
+        printf("Alright, you're thinkg of a mammal, now tell me how it moves: \n(1) Quadrupede\n(2) Biped\n(3) Flying\n(4) Aquatic\n");
+        printf("Enter the option: ");
+        scanf("%d", &mammal_option);
+        switch (mammal_option)
         {
-        case 1:
-            int opcaoQuadrupede;
-            printf("Um quadrúpede, para finalizar me diga se ele é: \n(1)Carnívoro\n(2)Herbívoro\n");
-            printf("Insira a opção: ");
-            scanf("%d", &opcaoQuadrupede);
-            if(opcaoQuadrupede == 1) printf("\n\nSEU ANIMAL É UM LEÃO\n\n");
-            else if(opcaoQuadrupede == 2) printf("\n\nSEU ANIMAL É UM CAVALO\n\n");
-            else printf("Opção inválida");
+        case 1:{
+            int quadrupede_option;
+            printf("A quadrupede, finally tell me if it is: \n(1)Carnivore\n(2)Herbivore\n");
+            printf("Enter the option: ");
+            scanf("%d", &quadrupede_option);
+            if(quadrupede_option == 1) printf("\n\nYOUR ANIMAL IS A LION\n\n");
+            else if(quadrupede_option == 2) printf("\n\nYOUR ANIMAL IS A HOURSE\n\n");
+            else printf("Invalid operation");
             break;
-        case 2:
-            int opcaoBipede;
-            printf("Um bípede, para finalizar me diga se ele é: \n(1)Onívoro\n(2)Frutífero\n");
-            printf("Insira a opção: ");
-            scanf("%d", &opcaoBipede);
-            if(opcaoBipede == 1) printf("\n\nSEU ANIMAL É UM HOMEM\n\n");
-            else if(opcaoBipede == 2) printf("\n\nSEU ANIMAL É UM MACACO\n\n");
-            else printf("Opção inválida");
+        }
+        case 2:{
+            int biped_option;
+            printf("A biped, finally tell me if it is: \n(1)Omnivorous\n(2)Fruitfull\n");
+            printf("Enther the option: ");
+            scanf("%d", &biped_option);
+            if(biped_option == 1) printf("\n\nYOUR ANIMAL IS A HUMAN\n\n");
+            else if(biped_option == 2) printf("\n\nYOUR ANIMAL IS A MONKEY\n\n");
+            else printf("Invalid operation");
             break;
+        }
         case 3:
-            printf("\n\nSEU ANIMAL É UM MORCEGO\n\n");
+            printf("\n\nYOUR ANIMAL IS A BAT\n\n");
             break;
         case 4:
-            printf("\n\nSEU ANIMAL É UMA BALEIA\n\n");
+            printf("\n\nYOUR ANIMAL IS A WHALE\n\n");
             break;
         default:
-            printf("Opção inválida!");
+            printf("Invalid operation!");
             break;
         }
         break;
-    case 2:
-        int opcaoAve;
-        printf("Certo, você está pensando em uma ave, agora me diga se ela é: \n(1) Não-voadora\n(2) Nadadora\n(3) De Rapina\n");
-        printf("Insira a opção: ");
-        scanf("%d", &opcaoAve);
-        switch (opcaoAve)
+    }
+    case 2:{
+        int bird_option;
+        printf("Alright, you're thinkg of a bird, now tell me if it is: \n(1) Non-flying\n(2) Swimmer\n(3) Of prey\n");
+        printf("Enther the option: ");
+        scanf("%d", &bird_option);
+        switch (bird_option)
         {
-        case 1:
-            int opcaoNaoVoadora;
-            printf("Uma não voadora, para finalizar me diga se ela é: \n(1) Tropical\n(2) Polar\n");
-            printf("Insira a opção: ");
-            scanf("%d", &opcaoNaoVoadora);
-            if(opcaoNaoVoadora == 1) printf("\n\nSEU ANIMAL É UM AVESTRUZ\n\n");
-            else if(opcaoNaoVoadora == 2)printf("\n\nSEU ANIMAL É UM PINGUIM\n\n");
-            else printf("Opção inválida");
+        case 1:{
+            int non_flying_option;
+            printf("A non-flying, finally tell me if it is: \n(1) Tropical\n(2) Polar\n");
+            printf("Enther the option: ");
+            scanf("%d", &non_flying_option);
+            if(non_flying_option == 1) printf("\n\nYOUR ANIMAL IS AN OSTRICH\n\n");
+            else if(non_flying_option == 2)printf("\n\nYOUR ANIMAL IS A PENGUIM \n\n");
+            else printf("Invalid operation");
             break;
+        }
         case 2:
-            printf("\n\nSEU ANIMAL É UM PATO\n\n");
+            printf("\n\nYOUR ANIMAL IS A DUCK\n\n");
             break;
         case 3:
-            printf("\n\nSEU ANIMAL É UMA ÁGUIA\n\n");
+            printf("\n\nYOUR ANIMAL IS A EAGLE\n\n");
             break;
         default:
-            printf("Opção inválida!");
+            printf("Invalid operation!");
             break;
         }
         break;
-    case 3:
-        int opcaoReptil;
-        printf("Certo, você está pensando em um réptil, agora me diga se ele é do tipo: \n(1) Com casco\n(2) Carnívoro\n(3) Sem patas\n");
-        printf("Insira a opção: ");
-        scanf("%d", &opcaoReptil);
-        if(opcaoReptil == 1) printf("\n\nSEU ANIMAL É UMA TARTARUGA\n\n");
-        else if(opcaoReptil == 2) printf("\n\nSEU ANIMAL É UM CROCODILO\n\n");
-        else if(opcaoReptil == 3) printf("\n\nSEU ANIMAL É UMA COBRA\n\n");
-        else printf("Opção inválida");
+    }
+    case 3:{
+        int reptiles_option;
+        printf("Alright, you're thinking of a reptiles, now tell me if it's the type: \n(1) With shell\n(2) Carnivore\n(3) Without paws\n");
+        printf("Enther the option: ");
+        scanf("%d", &reptiles_option);
+        if(reptiles_option == 1) printf("\n\nYOUR ANIMAL IS A TURTLE\n\n");
+        else if(reptiles_option == 2) printf("\n\nYOUR ANIMAL IS A CROCODILE\n\n");
+        else if(reptiles_option == 3) printf("\n\nYOUR ANIMAL IS A SNAKE\n\n");
+        else printf("Invalid operation");
         break;
-
+    }
     default:
-        printf("Opção inválida");
+        printf("Invalid operation");
         break;
     }
 }

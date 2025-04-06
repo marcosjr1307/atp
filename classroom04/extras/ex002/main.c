@@ -1,29 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main(){
     int n1, n2;
-    setlocale(LC_ALL, "Portuguese");
 
-    printf("Insira dois números\n");
-    printf("Valor 1: ");
+    printf("Enter two numbers\n");
+    printf("Value 1: ");
     scanf("%d",  &n1);
-    printf("Valor 2: ");
+    printf("Value 2: ");
     scanf("%d", &n2);
 
     if((n1 % 2 == 0) && (n2 % 2 == 0)){
-        printf("Dois números pares");
-        printf("\nResultado: %d (n1+n2)", n1+n2);
+        printf("Two even numbers");
+        printf("\nResutl: %d (n1+n2)", n1+n2);
     }else if((n1 % 2 != 0) && (n2 % 2 != 0)){
-        printf("Dois números ímpares");
-        printf("\nResultado: %d (n1-n2)", n1-n2);
+        printf("Two odd numbers");
+        printf("\nResult: %d (n1-n2)", n1-n2);
     }else if((n1 % 2 == 0) && (n2 % 2 != 0)){
-        printf("O primeiro ser par e o segundo ímpar");
-        printf("\nResultado: %d (n1*n2)", n1*n2);
+        printf("The first is even and the second is odd");
+        printf("\nResult: %d (n1*n2)", n1*n2);
     }else if((n1 % 2 != 0) && (n2 % 2 == 0)){
-        printf("O primeiro ser ímpar e o segundo par");
-        printf("\nResultado: %.2f (n1/n2)", (float) n1/n2);
+        printf("The first is odd and the second is even");
+        printf("\nResult: %.2f (n1/n2)", (float) n1/n2);
     }
     printf("\n\n");
 }

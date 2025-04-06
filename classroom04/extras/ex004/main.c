@@ -1,52 +1,49 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main(){
-    float salario_minimo, limite_isencao_IRFP, preco_led, preco_lcd, comissao_led, comissao_lcd, salario_bruto, salario_liquido, valor_superior_limite;
-    int  qtd_led, qtd_lcd;
-    setlocale(LC_ALL, "Portuguese");
-    printf("\n\nCálculo salário\n");
-    printf("Informe seu salário mínimo: ");
-    scanf("%f", &salario_minimo);
-    printf("Informe o limite de isenção do Imposto sobre Renda das Pessoas Físicas (IRPF): ");
-    scanf("%f", &limite_isencao_IRFP);
-    printf("Informe o valor dos televisores LED (R$): ");
-    scanf("%f", &preco_led);
-    printf("Informe a quantidade de televisores LED vendidos: ");
-    scanf("%d", &qtd_led);
-    printf("Informe o valor dos televisores LCD (R$): ");
-    scanf("%f", &preco_lcd);
-    printf("Informe a quantidade de televisores LCD vendidos: ");
-    scanf("%d", &qtd_lcd);
+    float minimum_wage, exemption_limit_IRS, led_price, lcd_price, led_commission, lcd_commission, gross_salary, net_salary, upper_limit_value;
+    int  qty_led, qty_lcd;
+    printf("\n\nSalary calculation\n");
+    printf("Enter your minimum salary: ");
+    scanf("%f", &minimum_wage);
+    printf("Enter the limit of the Internal Revenue Service (IRS): ");
+    scanf("%f", &exemption_limit_IRS);
+    printf("Enter the price of the LED televisions (R$): ");
+    scanf("%f", &led_price);
+    printf("Enter the quantity of the LED television sold: ");
+    scanf("%d", &qty_led);
+    printf("Enter the value of the LCD television (R$): ");
+    scanf("%f", &lcd_price);
+    printf("Enter the quantity of LCD television sold: ");
+    scanf("%d", &qty_lcd);
     
-    //Calculando LED
-    if(qtd_led >= 10){
-        comissao_led = 0.14*qtd_led*preco_led;
-    }else if((qtd_led >= 1) && (qtd_led < 10)){
-        comissao_led = 0.13*qtd_led*preco_led;
+    if(qty_led >= 10){
+        led_commission = 0.14*qty_led*led_price;
+    }else if((qty_led >= 1) && (qty_led < 10)){
+        led_commission = 0.13*qty_led*led_price;
     }
 
-    //Calculando LCD
-    if(qtd_lcd >= 20){
-        comissao_lcd = 0.13*qtd_lcd*preco_lcd;
-    }else if((qtd_lcd >= 1) && (qtd_lcd <10)){
-        comissao_lcd = 0.12*qtd_lcd*preco_lcd;
+    if(qty_lcd >= 20){
+        lcd_commission = 0.13*qty_lcd*lcd_price;
+    }else if((qty_lcd >= 1) && (qty_lcd <10)){
+        lcd_commission = 0.12*qty_lcd*lcd_price;
     }
 
-    salario_bruto = salario_minimo + comissao_lcd + comissao_led;
-    //INSS
-    salario_liquido = salario_bruto*0.92;
+    gross_salary = minimum_wage + lcd_commission + led_commission;
 
-    //IRPF
-    if(salario_liquido > limite_isencao_IRFP){
-        valor_superior_limite = salario_liquido - limite_isencao_IRFP;
-        salario_liquido -= valor_superior_limite;
-        valor_superior_limite *= 0.85;
-        salario_liquido += valor_superior_limite;
+
+    net_salary = gross_salary*0.92;
+
+
+    if(net_salary > exemption_limit_IRS){
+        upper_limit_value = net_salary - exemption_limit_IRS;
+        net_salary -= upper_limit_value;
+        upper_limit_value *= 0.85;
+        net_salary += upper_limit_value;
     }
 
-    printf("Salário bruto: R$%.2f\nSalário líquido: R$%.2f", salario_bruto, salario_liquido);
+    printf("Gross salary: R$%.2f\nNet salary: R$%.2f", gross_salary, net_salary);
 
 
 

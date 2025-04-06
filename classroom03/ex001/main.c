@@ -1,17 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL,"Portuguese");
-    int ano;
-    printf("Insira um ano para ver se ele é bissexto: ");
-    scanf("%d", &ano);
+    int year;
+    printf("Enter a year to see if it's a leap year: ");
+    scanf("%d", &year);
 
-    if((ano%400 == 0) || ((ano%4 == 0) && !(ano % 100 == 0))){
-        printf("Ano %d é BISSEXTO", ano);
+    if((year%400 == 0) || ((year%4 == 0) && !(year % 100 == 0))){
+        printf("year %d is a leap year", year);
     }else{
-        printf("Ano %d não é bissexto", ano);
+        printf("year %d isn't a leap year", year);
     }
     
     return 0;

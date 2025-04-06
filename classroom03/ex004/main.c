@@ -1,34 +1,32 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    int mes, ano;
+    int month, year;
 
-    printf("Insira um mês (número) para ver a quantidade de dias que ele tem: ");
-    scanf("%d", &mes);
+     printf("Enter a month (number) to see the how many days it has: ");
+    scanf("%d", &month);
     
-    if(mes<=12){
-        if(mes == 2){
-            printf("Insira o ano: ");
-            scanf("%d", &ano);
-            if((ano%400 == 0) || ((ano%4 == 0) && !(ano % 100 == 0))){
-                printf("29 dias");
+    if(month<=12){
+        if(month == 2){
+            printf("Enter the year: ");
+            scanf("%d", &year);
+            if((year%400 == 0) || ((year%4 == 0) && !(year % 100 == 0))){
+                printf("29 days");
             }else{
-                printf("28 dias");
+                printf("28 days");
             }
-        }else if(mes == 8){
-            printf("31 dias");
+        }else if(month == 8){
+            printf("31 days");
         }else{
-            if((mes != 2) && (mes != 8) && (mes % 2 ==0)){
-                printf("30 dias");
-            }else if((mes != 2) && (mes != 8) && (mes % 2 != 0)){
-                printf("31 dias");
+            if((month != 2) && (month != 8) && (month % 2 ==0)){
+                printf("30 days");
+            }else if((month != 2) && (month != 8) && (month % 2 != 0)){
+                printf("31 days");
             }
         }
     }else{
-        printf("Mês inválido!");
+        printf("Invalid month!");
     }
     
 

@@ -1,23 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 #include <math.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    float horario, parte_minutos;
-    int parte_hora, minutos;
-    printf("Insira um horário em formato numérico (Exemplo: 4:30 = 4.30): ");
-    scanf("%f", &horario);
+    float time, minutes_part;
+    int hours_part, minutes;
+    printf("Enter the time in numeric format (Exemple: 4:30 = 4.30): ");
+    scanf("%f", &time);
     
-    parte_hora = (int) horario;
-    parte_minutos = (horario - parte_hora);
-    parte_minutos *= 100;
-    parte_hora*=60;
+    hours_part= (int) time;
+    minutes_part = (time - hours_part);
+    minutes_part *= 100;
+    hours_part*=60;
     
-    minutos = parte_hora + parte_minutos;
+    minutes = hours_part + minutes_part;
 
-    printf("Horário em minutos: %d minutos", minutos);
+    printf("Time: %d minutes", minutes);
 
     return 0;
 }

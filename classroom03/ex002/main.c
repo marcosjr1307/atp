@@ -1,20 +1,18 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
     int a, b, c;
     
-    printf("Insira 3 valores para ver qual o maior");
-    printf("\nValor 1: ");
+    printf("Enter 3 values to see which one is the largest");
+    printf("\nValue 1: ");
     scanf("%d", &a);
-    printf("Valor 2: ");
+    printf("Value 2: ");
     scanf("%d", &b);
-    printf("Valor 3: ");
+    printf("Value 3: ");
     scanf("%d", &c);
 
-    printf("Ordenação: ");
+    printf("Ordering: ");
     if(a>=b && a>=c && b>=c){
         printf("%d  %d  %d", c, b,a );
     }else if(a>=b && a>=c && b<=c){
@@ -25,6 +23,7 @@ int main(){
         printf("%d  %d  %d", c, a, b);
     }else if(a<=b && b>=c && a<=c){
         printf("%d  %d  %d", a, c, b);
+    }else if(a <=b && b<=c){
+        printf("%d  %d  %d", a, b, c);
     }
-
 }

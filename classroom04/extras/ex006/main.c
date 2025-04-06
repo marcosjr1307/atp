@@ -1,54 +1,52 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    char sexo, nacionalidade, nome[50];
-    int idade;
+    char gender, nationality, name[50];
+    int age;
     
-    printf("Insira seu nome: ");
-    gets(nome);
-    printf("Insira o seu sexo (F) ou (M): ");
-    scanf(" %c", &sexo);
-    printf("Insira a sua nacionalidade. Use (b) para Brasileira ou (e) para estrangeira: ");
-    scanf(" %c", &nacionalidade);
-    printf("Insira a sua idade: ");
-    scanf("%d", &idade);
+    printf("Enter your name: ");
+    gets(name);
+    printf("Enter your gender (F) ou (M): ");
+    scanf(" %c", &gender);
+    printf("Enter your nationality. Use (b) for Brazilian or (e) for foreigner: ");
+    scanf(" %c", &nationality);
+    printf("Enter your age: ");
+    scanf("%d", &age);
 
-    if((sexo != 'M') && (sexo != 'F') && (sexo != 'm') && (sexo != 'f')){
-        printf("Sexo inválido!");
-    }else if((nacionalidade != 'B') && (nacionalidade != 'E') && (nacionalidade != 'b') && (nacionalidade != 'e')){
-        printf("Nacionalidade inválida!");
-    }else if((idade < 0) || (idade > 150)){
-        printf("Idade inválida!");
+    if((gender != 'M') && (gender != 'F') && (gender != 'm') && (gender != 'f')){
+        printf("Invalid gender!");
+    }else if((nationality != 'B') && (nationality != 'E') && (nationality != 'b') && (nationality != 'e')){
+        printf("Invalid nationality!");
+    }else if((age < 0) || (age > 150)){
+        printf("Invalid age!");
     }else{
-        if(idade >= 18){
-            if(nacionalidade == 'b' || nacionalidade == 'B'){
-                if(sexo == 'm' || sexo == 'M'){
-                    printf("%s, brasileiro do sexo masculino e maior de idade, está habilitado a dirigir", nome);
+        if(age >= 18){
+            if(nationality == 'b' || nationality == 'B'){
+                if(gender == 'm' || gender == 'M'){
+                    printf("%s, brazilian male of legal age, is able to drive", name);
                 }else{
-                    printf("%s, brasileira do sexo feminino e maior de idade, está habilitada a dirigir", nome);
+                    printf("%s, brazilian female of legal age, is able to drive", name);
                 }
             }else{
-                if(sexo == 'm' || sexo == 'M'){
-                    printf("%s, estrangeiro do sexo masculino e maior de idade, está habilitado a dirigir", nome);
+                if(gender == 'm' || gender == 'M'){
+                    printf("%s, foreigner male of legal age, is able to drive", name);
                 }else{
-                    printf("%s, estrangeira do sexo feminino e maior de idade, está habilitada a dirigir", nome);
+                    printf("%s, foreigner female of legal age, is able to drive", name);
                 }
             }
         }else{
-            if(nacionalidade == 'b' || nacionalidade == 'B'){
-                if(sexo == 'm' || sexo == 'M'){
-                    printf("%s, brasileiro do sexo masculino e menor de idade, não está habilitado a dirigir", nome);
+            if(nationality == 'b' || nationality == 'B'){
+                if(gender == 'm' || gender == 'M'){
+                    printf("%s, brazilian male and minor age, isn't able to drive", name);
                 }else{
-                    printf("%s, brasileira do sexo feminino e menor de idade, não está habilitada a dirigir", nome);
+                    printf("%s, brazilian female and minor age, isn't able to drive", name);
                 }
             }else{
-                if(sexo == 'm' || sexo == 'M'){
-                    printf("%s, estrangeiro do sexo masculino e menor de idade, não está habilitado a dirigir", nome);
+                if(gender == 'm' || gender == 'M'){
+                    printf("%s, foreigner male and minor age, isn't able to drive", name);
                 }else{
-                    printf("%s, estrangeira do sexo feminino e menor de idade, não está habilitada a dirigir", nome);
+                    printf("%s, foreigner female and minor age, isn't able to drive", name);
                 }
             }
         }

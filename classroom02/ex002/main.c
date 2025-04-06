@@ -1,17 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    int ano_nascimento, ano_atual;
+    int birth_year, current_year;
 
-    printf("Insira o seu ano de nascimento: ");
-    scanf("%d", &ano_nascimento);
-    printf("Insira o ano atual: ");
-    scanf("%d", &ano_atual);
+    printf("Enter your year of birth: ");
+    scanf("%d", &birth_year);
+    printf("Enter the current year: ");
+    scanf("%d", &current_year);
 
-    printf("Sua idade: %d anos", ano_atual - ano_nascimento);
+    printf("Your age: %d years old", current_year - birth_year);
 
     return 0;
 }

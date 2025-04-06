@@ -1,28 +1,26 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
     int a,b,c;
 
-    printf("Insira os 3 lados de um triângulo");
-    printf("\nLado 1: ");
+    printf("Enter the 3 sides of the triangle");
+    printf("\nSide 1: ");
     scanf("%d", &a);
-    printf("Lado 2: ");
+    printf("Side 2: ");
     scanf("%d", &b);
-    printf("Lado 3: ");
+    printf("Side 3: ");
     scanf("%d", &c);
 
     if((a < (b+c)) && (b < (a+c)) && (c < (a+b))){
         if((a == b) && (b == c)){
-            printf("\nTriângulo Equilátero\n");
+            printf("\nEquilateral Triangle\n");
         }else if((a == b) || (a == c) || (b == c)){
-            printf("\nTriângulo Isósceles\n");
+            printf("\nIsosceles Triangle\n");
         }else{
-            printf("\nTriângulo Escaleno\n");
+            printf("\nScalane Triangle\n");
         }
     }else{
-        printf("\nOs valores indicados não formam um triângulo!\n");
+        printf("\nThe values entered don't form a triangle!\n");
     }
 }

@@ -4,59 +4,59 @@
 #include <math.h>
 
 int main(){
-    char opcao;
-    float n1, n2, resultado;
-    printf("\n\nMenu de opções\n(+) Somar dois números\n(-) Subtrair dois números\n(*) Multiplicar dois números\n(/) Dividir dois números\n(@) Raiz quadrada de um número\n Insira os símbolos demonstrados para realizar a operação desejada!\nDigite a opção desejada: ");
-    scanf("%c", &opcao);
+    char option;
+    float n1, n2, result;
+    printf("\n\nOptions menu\n(+) Sum two number\n(-) Subtract two numbers\n(*) Multiply two numbers\n(/) Divide two numbers\n(@) Square root of one number\n Enter the symbols shown to perform the desired operation!\nEnter the desired option: ");
+    scanf("%c", &option);
 
-    switch (opcao)
+    switch (option)
     {
     case '+':
-        printf("Insira os valores que deseja somar: ");
-        printf("\nValor 1: ");
+        printf("Enter the values you want to sum: ");
+        printf("\nValue 1: ");
         scanf("%f", &n1);
-        printf("Valor 2: ");
+        printf("Value 2: ");
         scanf("%f", &n2);
-        resultado = n1 + n2;
-        printf("%.0f + %.0f = %.0f", n1, n2, resultado);
+        result = n1 + n2;
+        printf("%.0f + %.0f = %.0f", n1, n2, result);
         break;
     case '-':
-        printf("Insira os valores que deseja subtrair: ");
-        printf("\nValor 1: ");
+        printf("Enter the values you want to subtract: ");
+        printf("\nValue 1: ");
         scanf("%f", &n1);
-        printf("Valor 2: ");
+        printf("Value 2: ");
         scanf("%f", &n2);
-        resultado = n1 - n2;
-        printf("%.0f - %.0f = %.0f", n1, n2, resultado);
+        result = n1 - n2;
+        printf("%.0f - %.0f = %.0f", n1, n2, result);
         break;
     case '*':
-        printf("Insira os valores que deseja multiplicar: ");
-        printf("\nValor 1: ");
+        printf("Enter the values you want to multiply: ");
+        printf("\nValue 1: ");
         scanf("%f", &n1);
-        printf("Valor 2: ");
+        printf("Value 2: ");
         scanf("%f", &n2);   
-        resultado = n1 * n2;
-        printf("%.0f * %.0f = %.0f", n1, n2, resultado);
+        result = n1 * n2;
+        printf("%.0f * %.0f = %.0f", n1, n2, result);
         break;
     case '/':
-        printf("Insira os valores que deseja dividir: ");
-        printf("\nValor 1: ");
+        printf("Enter the values you want to divide: ");
+        printf("\nValue 1: ");
         scanf("%f", &n1);
-        printf("Valor 2: ");
+        printf("Value 2: ");
         scanf("%f", &n2);
-        resultado = n1 / n2;
-        printf("%.2f / %.2f = %.2f", n1, n2, resultado);
+        result = n1 / n2;
+        printf("%.2f / %.2f = %.2f", n1, n2, result);
         break;
     case '@':
-        printf("Insira o valor para calcular sua raíz quadrada: ");
-        printf("\nValor: ");
+        printf("Enter the value to calculate it square root: ");
+        printf("\nValue: ");
         scanf("%f", &n1);
-        resultado = sqrt(n1);
-        printf("A raíz quadrade de %.2f = %.2f", n1, resultado);
+        result = sqrt(n1);
+        printf("The square root of %.2f = %.2f", n1, result);
         break;
     
     default:
-        printf("Operação inválida");
+        printf("Invalid operation");
         break;
     }
     printf("\n\n");

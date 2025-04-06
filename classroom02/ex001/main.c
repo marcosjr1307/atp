@@ -1,20 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
 
 int main(){
-    setlocale(LC_ALL, "Portuguese");
-    float deposito, taxaJuros, rendimento;
+    float deposit, interest_rate, income;
 
-    printf("Informe o valor do depósito: ");
-    scanf("%f", &deposito);
+    printf("Enter the deposit's amount: ");
+    scanf("%f", &deposit);
 
-    printf("Informe a taxa de juros em decimal: ");
-    scanf("%f", &taxaJuros);
+    printf("Enter the intereset_rate: ");
+    scanf("%f", &interest_rate);
 
-    rendimento = deposito * taxaJuros;
+    income = deposit * interest_rate;
 
-    printf("O valor do rendimento: R$%.2f\nO valor total: R$%.2f", rendimento, rendimento+deposito);
+    printf("Income value: R$%.2f\nTotal amount: R$%.2f", income, income+deposit);
 
 
     return 0;
