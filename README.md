@@ -23,8 +23,12 @@ The exercises range from basic concepts (calculating averages) to more advanced 
     - Concept: Conditional structures (Switch case).
     - Exercises: Guessing game, Salary calculation, Body Mass Index (BMI) calculator.
 5. [Classroom 05](https://github.com/marcosjr1307/atp/tree/main/classroom05) <br>
-    - Concept: Repetition Control Structures.
+    - Concept: Repetition Control Structures, break and continue.
     - Exercises: Prime numbers between 1 and a given number, Company search, Perfect numbers, Factorial.
+    - Extras: Guessing number game, interviews (searchs), GCD calculator.
+6. [Classroom 06](https://github.com/marcosjr1307/atp/tree/main/classroom06) <br>
+    - Concept: Array(Vector).
+    - Exercises: Array intercalation, largest number.
 ##
 
 <div align="center">  
