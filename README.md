@@ -29,6 +29,7 @@ The exercises range from basic concepts (calculating averages) to more advanced 
 6. [Classroom 06](https://github.com/marcosjr1307/atp/tree/main/classroom06) <br>
     - Concept: Array(Vector).
     - Exercises: Array intercalation, largest number.
+    - Extras: Answer Key, Randon Number, SORT, Palindrome array, Insert/Remove value from array.
 ##
 
 <div align="center">  
